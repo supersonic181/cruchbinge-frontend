@@ -7,7 +7,6 @@ export const changePass = async (email, password) => {
             headers: {
                 "Content-type": "application/json"
             },
-            withCredentials: true
         }
 
         const response = await axios.post(

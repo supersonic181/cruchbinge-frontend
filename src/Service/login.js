@@ -7,7 +7,6 @@ export const login = async (email, password) => {
             headers: {
                 "Content-type": "application/json"
             },
-            withCredentials: true
         }
 
         const { data } = await axios.post(

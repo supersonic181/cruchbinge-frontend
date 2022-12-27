@@ -7,7 +7,6 @@ export const verifyUser = async (email) => {
             headers: {
                 "Content-type": "application/json"
             },
-            withCredentials: true
         }
 
         const response = await axios.post(

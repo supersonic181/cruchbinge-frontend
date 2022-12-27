@@ -7,7 +7,6 @@ export const getList = async () => {
             headers: {
               "Content-type":"application/json"
             },
-            withCredentials: true
           }
 
         const response = await axios.get(
@@ -27,7 +26,6 @@ export const addToList = async (id) => {
             headers: {
                 "Content-type":"application/json"
             },
-            withCredentials: true
         }
         const response = await axios.post(
             process.env.REACT_APP_URL + "/api/users/watchLater", {
@@ -48,7 +46,6 @@ export const removeID = async (id) => {
             headers: {
                 "Content-type":"application/json"
             },
-            withCredentials: true
         }
         const response = await axios.post(
             process.env.REACT_APP_URL + "/api/users/removeWatchLater", {

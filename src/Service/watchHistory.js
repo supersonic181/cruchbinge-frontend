@@ -9,8 +9,6 @@ export const getHistory = async () => {
             headers: {
               "Content-type":"application/json"
             },
-            withCredentials: true,
-            credentials: "include"
           }
 
         const response = await axios.get(
@@ -32,8 +30,6 @@ export const addToWatched = async (id) => {
             headers: {
                 "Content-type":"application/json"
             },
-            withCredentials: true,
-            credentials: "include"
         }
         const response = await axios.post(
             process.env.REACT_APP_URL + "/api/users/watchHistory", {
