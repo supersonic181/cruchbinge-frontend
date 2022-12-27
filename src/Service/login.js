@@ -2,7 +2,6 @@ const { default: axios } = require("axios");
 
 // find user in db to let him/her login
 export const login = async (email, password) => {
-    console.log(email, password)
     try {
         const config = {
             headers: {
