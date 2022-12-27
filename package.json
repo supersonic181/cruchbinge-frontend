@@ -31,7 +31,6 @@
     "eject": "react-scripts eject",
     "server": "json-server watchLaterList.json --p 4000"
   },
-  "proxy": "https://crunchbingebackend-production.up.railway.app",
   "eslintConfig": {
     "extends": [
       "react-app",
