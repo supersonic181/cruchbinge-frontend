@@ -62,7 +62,6 @@ const LoginModal = ({ open, closeModal, history }) => {
         },
         validationSchema: validationSchema,
         onSubmit: async ({ email, password }) => {
-            console.log(email, password);
             login(email, password)
                 .then((data) => {
                     console.log(data);
