@@ -7,7 +7,7 @@ export const signUp = async(email, userName, password) => {
             headers: {
                 "Content-type":"application/json" 
             },
-            credentials: "include"
+            withCredentials: true
         }
         const { data } = await axios.post(
             process.env.REACT_APP_URL + "/api/users/register",
