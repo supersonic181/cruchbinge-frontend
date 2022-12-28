@@ -7,7 +7,8 @@ export const profile = async () => {
             headers: {
                 "Content-type": "application/json"
             },
-            withCredentials: true
+            withCredentials: true,
+            credentials: 'include'
         }
 
         const response = await axios.get(
@@ -19,7 +20,6 @@ export const profile = async () => {
     }
     catch (err) {
         console.log(err);
-        alert("Unauthorized Access");
-        window.location.href = "/";
+        throw new err;
     }
 };

@@ -7,7 +7,6 @@ import CardView from './HomeComponent/CardView';
 import Footer from '../Footer/Footer';
 import { getTrendingAll, getTrendingMovie, getTrendingTv } from '../../Service/Trending/Trending';
 import { useEffect, useState } from 'react';
-import { profile } from '../../Service/profile';
 
 const theme = createTheme();
 
@@ -28,23 +27,7 @@ export default function Home() {
       })
     return () => mounted = false;
   }, []);
-
-  // // get user profile info
-  // useEffect(() => {
-  //   async function fetchProfile() {
-  //     let mounted = true;
-  //     const res = await profile();
-  //     res
-  //       .then((data) => {
-  //         if (mounted) {
-  //           console.log(data);
-  //         }
-  //       })
-  //     return () => mounted = false;
-  //   }
-  //   fetchProfile();
-  // });
-
+  
   // Fetch Trending Movie
   useEffect(() => {
     let mounted = true;

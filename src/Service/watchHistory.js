@@ -9,6 +9,7 @@ export const getHistory = async () => {
             headers: {
               "Content-type":"application/json"
             },
+            withCredentials: true
           }
 
         const response = await axios.get(

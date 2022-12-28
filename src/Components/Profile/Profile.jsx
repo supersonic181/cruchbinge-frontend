@@ -25,13 +25,22 @@ function Profile(props) {
   useEffect(() => {
     async function fetchProfile() {
       let mounted = true;
-      const data = await profile();
-      if (mounted) {
-        setProfile({
-          name: data.userName,
-          email: data.email
+      profile()
+        .then(data => {
+          console.log(data);
+          if (mounted) {
+            setProfile({
+              name: data.userName,
+              email: data.email
+            })
+          }
         })
-      }
+        .catch((err) => {
+          setProfile({
+            name: "failed to fetch",
+            email: "failed to fetch"
+          })
+        })
       return () => mounted = false;
     }
     fetchProfile();
@@ -45,6 +54,9 @@ function Profile(props) {
           if (mounted) {
             setList(data);
           }
+        })
+        .catch((err) => {
+          setList([]);
         })
       return () => mounted = false;
     }
