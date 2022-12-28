@@ -46,6 +46,7 @@ export const removeID = async (id) => {
             headers: {
                 "Content-type":"application/json"
             },
+            withCredentials: true
         }
         const response = await axios.post(
             process.env.REACT_APP_URL + "/api/users/removeWatchLater", {
